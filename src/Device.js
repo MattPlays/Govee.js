@@ -8,18 +8,18 @@ module.exports = class Device {
      * @param {boolean} controllable - Controllable will be true when the device support commands to control.
      * @param {boolean} retrievable - Retrievable will be true when the device support querying the current
 device state.
-     * @param {string[]} supportedCmds - Commands supported by the device.
+     * @param {string[]} supportCmds - Commands supported by the device.
  Valid Values in the array: `"turn"`, `"brightness"`, `"color"`, `"colorTem"`
      * @param {object} properties 
      * @returns {Device} - Return your devices supported by the Govee API.
      */
-    constructor(device, model, deviceName, controllable, retrievable, supportedCmds, properties) {
+    constructor(device, model, deviceName, controllable, retrievable, supportCmds, properties) {
         this.device = device;
         this.model = model;
         this.deviceName = deviceName;
         this.controllable = controllable;
         this.retrievable = retrievable;
-        this.supportedCmds = supportedCmds;
+        this.supportCmds = supportCmds;
         this.properties = properties;
     }
     /**
