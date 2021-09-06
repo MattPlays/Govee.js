@@ -1,0 +1,24 @@
+{
+  "name": "govee.js",
+  "version": "1.0.0",
+  "description": "Govee.js is a Javascript Wrapper for the Govee v1.3 API",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattPlays/Govee.js.git"
+  },
+  "keywords": [
+    "govee",
+    "API"
+  ],
+  "author": "MattPlays (https://github.com/MattPlays/",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattPlays/Govee.js/issues"
+  },
+  "homepage": "https://github.com/MattPlays/Govee.js#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
