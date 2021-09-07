@@ -1,6 +1,6 @@
 {
   "name": "govee.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Govee.js is a Javascript Wrapper for the Govee v1.3 API",
   "main": "src/index.js",
   "types": "types/index.d.ts",
