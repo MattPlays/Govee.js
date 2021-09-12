@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+const axios = require("axios").default;
 module.exports = class Device {
     /**
      * 
@@ -37,15 +37,12 @@ device state.
                 "value": "on"
             }
         }
-        const options = {
-            "method": "PUT",
-            "headers": {
+        return axios.put(url, payload, {
+            headers: {
                 "Govee-API-Key": apiKey,
                 "Content-Type": "application/json"
-            },
-            "body": JSON.stringify(payload),
-        }
-        return fetch(url, options).then((res) => res.json()).then((data) => {
+            }
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     }
@@ -64,15 +61,12 @@ device state.
                 "value": "off"
             }
         }
-        const options = {
-            "method": "PUT",
-            "headers": {
+        return axios.put(url, payload, {
+            headers: {
                 "Govee-API-Key": apiKey,
                 "Content-Type": "application/json"
-            },
-            "body": JSON.stringify(payload),
-        }
-        return fetch(url, options).then((res) => res.json()).then((data) => {
+            }
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     }
@@ -94,15 +88,12 @@ device state.
                 "value": Math.abs(value)
             }
         }
-        const options = {
-            "method": "PUT",
-            "headers": {
+        return axios.put(url, payload, {
+            headers: {
                 "Govee-API-Key": apiKey,
                 "Content-Type": "application/json"
-            },
-            "body": JSON.stringify(payload),
-        }
-        return fetch(url, options).then((res) => res.json()).then((data) => {
+            }
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     }
@@ -129,15 +120,12 @@ device state.
                 }
             }
         }
-        const options = {
-            "method": "PUT",
-            "headers": {
+        return axios.put(url, payload, {
+            headers: {
                 "Govee-API-Key": apiKey,
                 "Content-Type": "application/json"
-            },
-            "body": JSON.stringify(payload),
-        }
-        return fetch(url, options).then((res) => res.json()).then((data) => {
+            }
+        }).then(({data}) => {
             return data;
         }).catch((err) => {throw new Error(err)});
     }
@@ -157,16 +145,13 @@ named `“properties”`
                 "value": value
             }
         }
-        const options = {
-            "method": "PUT",
-            "headers": {
+        return axios.put(url, payload, {
+            headers: {
                 "Govee-API-Key": apiKey,
                 "Content-Type": "application/json"
-            },
-            "body": JSON.stringify(payload),
-        }
-        return fetch(url, options).then((res) => res.json()).then((data) => {
+            }
+        }).then(({data}) => {
             return data;
-        }).catch((err) => {throw new Error(err)}); 
+        }).catch((err) => {throw new Error(err)});
     }
 }
