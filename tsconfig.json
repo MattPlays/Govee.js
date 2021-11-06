@@ -1,0 +1,13 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ES5",
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["ES2015", "DOM"],
+        "outDir": "build"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
